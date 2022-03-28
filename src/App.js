@@ -6,6 +6,7 @@ import {Link, Routes, Route} from 'react-router-dom';
 import ParamRoute from './components/paramRoute/ParamRoute';
 import AdminPage from './components/adminPage/AdminPage';
 import './App.css';
+import MikePage from './components/mike/mikepage';
 // link =<a></a>
 
 const authUser = () => {
@@ -21,15 +22,19 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Link class="admin-container" to="/admin">Admin</Link>
+        <Link className="admin-container" to="/admin">Admin</Link>
       </div>
-      <div class="nav-bar-container">
-        <Link class="menu-to" to="/">home</Link>
-        <Link class="menu-to" to="/testcomponent">test components</Link>
-        <Link class="menu-to" to="/product">product</Link>
-        <Link class="menu-to" to="/category">category</Link>
+      <div className="nav-bar-container">
+        <Link className="menu-to" to="/">home</Link>
+        <Link className="menu-to" to="/testcomponent">test components</Link>
+        <Link className="menu-to" to="/product">product</Link>
+        <Link className="menu-to" to="/category">category</Link>
       </div>
-
+      <div className="Mike-conatiner">
+        <Link className="menu-to" to="mikepage">NutYed</Link>
+        
+      </div>
+    
       <Routes>
         <Route path="/" element={<HomePage/>}></Route>
       </Routes>
@@ -47,6 +52,10 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/admin" element={<AdminPage isAuth={checking} />}></Route>
+      </Routes>
+
+      <Routes>
+        <Route path="/mikepage" element={<MikePage/>}></Route>
       </Routes>
 
     </div>

@@ -1,6 +1,8 @@
 // import axios  from "axios";
 // import { useState, useEffect, useReducer } from "react";
 import Reducer from '../../Reducer';
+import ThirdComponent from '../testcomponents/ThirdComponent/ThirdCompoent';
+import LogicLearn from './LogicLearn/LogicLearn';
 
 const Category = () => {
 
@@ -29,6 +31,10 @@ const Category = () => {
                         <p>{el.name} {el.url}</p>
                     ))
                 }
+            </div>
+
+            <div>
+                <LogicLearn/>
             </div>
         </>
     );

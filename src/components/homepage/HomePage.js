@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import LogicTest from "./checkLogic/LogicTest";
 
 const HomePage = () => {
 
@@ -40,6 +41,9 @@ const HomePage = () => {
                         setCount(count-1)
                     }}
                 >Remove</button>
+            </div>
+            <div>
+                <LogicTest/>
             </div>
         </>
     );
